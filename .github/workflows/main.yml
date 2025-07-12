@@ -20,6 +20,6 @@ jobs:
           wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
           chmod +x /usr/local/bin/yq
       - name: Generate Containerfile
-        run: bash ./generate-containerfile.sh
+        run: curl -s https://raw.githubusercontent.com/emblem-66/test3/refs/heads/main/generate-containerfile.sh | bash
       - name: Build image
         run: podman build -t my-fedora-image -f Containerfile .
