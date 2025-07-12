@@ -1,0 +1,37 @@
+image:
+  base: quay.io/fedora/fedora-bootc:latest
+
+  stages:
+    - name: stage1
+      dnf:
+        install:
+          - tailscale
+          - openssh
+        remove:
+          - 
+      systemctl:
+        enable:
+          - tailscale 
+          - sshd.service
+        disable:
+          - 
+      commands:
+        - echo "Running post-install setup"
+        - systemctl mask remount-fs.service
+
+    - name: stage2
+      from: stage1
+      dnf:
+        install:
+          - gdm
+          - gnome-shell
+        remove:
+          - yelp
+      systemctl:
+        enable:
+          - 
+        disable:
+          - 
+      commands:
+        - echo "Running post-install setup"
+
