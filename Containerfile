@@ -1,5 +1,4 @@
-#FROM quay.io/fedora/fedora-bootc:42
-FROM quay.io/fedora-ostree-desktops/base-atomic:42
-RUN rpm -qa | sort
-RUN jq -r .packages[] /usr/share/rpm-ostree/treefile.json
+FROM quay.io/fedora/fedora-bootc:42
+#FROM quay.io/fedora-ostree-desktops/base-atomic:42
+RUN dnf copr enable -y ryanabx/cosmic-epoch && dnf install -y cosmic-desktop
 RUN bootc container lint
