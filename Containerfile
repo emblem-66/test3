@@ -5,7 +5,7 @@
 #RUN bootc container lint
 #-------------
 FROM scratch AS ctx
-COPY -chmod=755 script.sh /
+COPY --chmod=755 script.sh /
 
 # Base Image
 FROM quay.io/fedora/fedora-bootc:latest
