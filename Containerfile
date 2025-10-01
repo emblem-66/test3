@@ -6,6 +6,7 @@
 #-------------
 FROM scratch AS ctx
 COPY script.sh /
+RUN chmod +x /script.sh
 
 # Base Image
 FROM quay.io/fedora/fedora-bootc:latest
