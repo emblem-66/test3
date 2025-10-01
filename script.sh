@@ -68,7 +68,7 @@ rpm -qa 'qemu-user-static*' | xargs dnf remove -y
 
 dnf clean all
 
-rpm -e --verbose dnf dnf-data python3-dnf
+#rpm -e --verbose dnf dnf-data python3-dnf
 
 
 
