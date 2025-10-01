@@ -6,6 +6,6 @@ FROM quay.io/fedora/fedora-bootc:latest
 
 COPY 3rd_party.repo /etc/yum.repos.d/
 
-RUN dnf install -y tailscale && systemctl enable tailscaled.service && systemctl enable sshd.service && rpm -qa 'qemu-user-static*' | xargs dnf remove -y && dnf clean all
+RUN dnf install -y tailscale && systemctl enable tailscaled.service && systemctl enable sshd.service && dnf install -y morewaita-icon-theme && rpm -qa 'qemu-user-static*' | xargs dnf remove -y && dnf clean all
 
 RUN bootc container lint
