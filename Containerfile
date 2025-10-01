@@ -21,7 +21,7 @@ COPY --chmod=755 brew.sh /
 # Base Image
 FROM quay.io/fedora/fedora-bootc:latest
 COPY 3rd_party.repo /etc/yum.repos.d/
-COPY --chmod=755 /ctx/brew /
+#COPY --chmod=755 /ctx/brew /
 COPY --from=builder --chown=1000:1000 /home/linuxbrew /usr/share/homebrew
 
 ### MODIFICATIONS
