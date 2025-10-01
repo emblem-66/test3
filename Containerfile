@@ -6,7 +6,7 @@
 #-------------
 
 FROM quay.io/fedora/fedora:latest AS builder
-
+COPY --chmod=755 brew.sh /
 WORKDIR /tmp
 RUN /brew.sh
 
