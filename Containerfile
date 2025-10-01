@@ -6,10 +6,14 @@
 #-------------
 FROM scratch AS ctx
 COPY --chmod=755 script.sh /
+COPY --chmod=755 brew.sh /
+RUN /brew.sh
 
 # Base Image
 FROM quay.io/fedora/fedora-bootc:latest
 COPY 3rd_party.repo /etc/yum.repos.d/
+COPY --chmod=755 /ctx/brew /
+
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
