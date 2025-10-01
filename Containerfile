@@ -11,17 +11,14 @@ WORKDIR /tmp
 RUN /brew.sh
 
 
-
-
-
 FROM scratch AS ctx
 COPY --chmod=755 script.sh /
-COPY --chmod=755 brew.sh /
 
 # Base Image
 FROM quay.io/fedora/fedora-bootc:latest
 COPY 3rd_party.repo /etc/yum.repos.d/
-#COPY --chmod=755 /ctx/brew /
+
+### HOMEBREW
 COPY --from=builder --chown=1000:1000 /home/linuxbrew /usr/share/homebrew
 
 ### MODIFICATIONS
@@ -33,9 +30,6 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/script.sh
-
-COPY --chmod=755 /builder/textfile.txt /
-RUN cat textfile.txt
 
 ### LINTING
 ## Verify final image and contents are correct.
