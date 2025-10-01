@@ -12,43 +12,41 @@ systemctl enable sshd.service
 dnf install -y morewaita-icon-theme
 
 # hardware/drivers
-dnf install -y \
-    kernel-modules-extra \
-    iwlwifi-mvm-firmware \
-    alsa-sof-firmware \
-    blueman \
-    NetworkManager-wifi \
-    NetworkManager-openvpn-gnome \
-    powertop \
-    wpa_supplicant
+#dnf install -y \
+#    kernel-modules-extra \
+#    iwlwifi-mvm-firmware \
+#    alsa-sof-firmware \
+#    blueman \
+#    NetworkManager-wifi \
+#    NetworkManager-openvpn-gnome \
+#    powertop \
+#    wpa_supplicant
 
 # shell tools and development
-dnf install -y \
-    cyrus-sasl-plain \
-    fpaste \
-    git \
-    glibc-langpack-de \
-    glibc-langpack-en \
-    isync \
-    krb5-workstation \
-    man-db \
-    mtr \
-    mutt  \
-    neovim \
-    nmap-ncat \
-    restic \
-    rsync \
-    strace \
-    syncthing \
-    systemd-container \
-    toolbox \
-    tree \
-    w3m \
-    wget
+#dnf install -y \
+#    cyrus-sasl-plain \
+#    fpaste \
+#    git \
+#    glibc-langpack-de \
+#    glibc-langpack-en \
+#    isync \
+#    krb5-workstation \
+#    man-db \
+#    mtr \
+#    mutt  \
+#    neovim \
+#    nmap-ncat \
+#    restic \
+#    rsync \
+#    strace \
+#    syncthing \
+#    systemd-container \
+#    toolbox \
+#    tree \
+#    w3m \
+#    wget
 
-# desktop plumbing/apps
-dnf install -y \
-    flatpak \
+
 
 # GNOME desktop
 dnf install -y \
@@ -61,6 +59,10 @@ dnf install -y \
 
 # graphical target
 systemctl set-default graphical.target
+
+# desktop plumbing/apps
+dnf install -y \
+    flatpak \
 
 #dnf remove -y \
 
