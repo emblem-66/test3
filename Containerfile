@@ -1,8 +1,8 @@
-FROM quay.io/fedora/fedora-bootc:latest
-COPY 3rd_party.repo /etc/yum.repos.d/
-COPY script.sh /
-RUN chmod +x /script.sh && /script.sh; rm /script.sh
-RUN bootc container lint
+#FROM quay.io/fedora/fedora-bootc:latest
+#COPY 3rd_party.repo /etc/yum.repos.d/
+#COPY script.sh /
+#RUN chmod +x /script.sh && /script.sh; rm /script.sh
+#RUN bootc container lint
 #-------------
 FROM scratch AS ctx
 COPY script.sh /
