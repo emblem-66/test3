@@ -62,7 +62,7 @@ systemctl set-default graphical.target
 
 # desktop plumbing/apps
 dnf install -y \
-    flatpak \
+    flatpak
 
 #dnf remove -y \
 
