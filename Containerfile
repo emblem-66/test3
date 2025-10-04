@@ -5,10 +5,10 @@
 #RUN bootc container lint
 #-------------
 
-FROM quay.io/fedora/fedora:latest AS builder
-COPY --chmod=755 brew.sh /
-WORKDIR /tmp
-RUN /brew.sh
+#FROM quay.io/fedora/fedora:latest AS builder
+#COPY --chmod=755 brew.sh /
+#WORKDIR /tmp
+#RUN /brew.sh
 
 
 FROM scratch AS ctx
@@ -19,7 +19,7 @@ FROM quay.io/fedora/fedora-bootc:latest
 COPY 3rd_party.repo /etc/yum.repos.d/
 
 ### HOMEBREW
-COPY --from=builder --chown=1000:1000 /home/linuxbrew /usr/share/homebrew
+#COPY --from=builder --chown=1000:1000 /home/#linuxbrew /usr/share/homebrew
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
