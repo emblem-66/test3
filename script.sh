@@ -1,16 +1,6 @@
 #!/bin/bash
 set -xeuo pipefail
 
-# tailscale
-dnf install -y tailscale
-
-#systemctl enable tailscaled.service
-
-#systemctl enable sshd.service
-
-# morewaita
-dnf install -y morewaita-icon-theme
-
 # hardware/drivers
 #dnf install -y \
 #    kernel-modules-extra \
