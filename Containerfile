@@ -1,5 +1,3 @@
-#FROM quay.io/fedora/fedora-bootc:latest
-#COPY 3rd_party.repo /etc/yum.repos.d/
 FROM scratch AS ctx
 COPY --chmod=755 script.sh /
 
