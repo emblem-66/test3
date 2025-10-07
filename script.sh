@@ -118,7 +118,7 @@ dnf install -y piper
 systemctl enable tailscaled.service
 systemctl enable sshd.service
 # bootc
-systemctl enable bootc-fetch-apply-updates.timer
+systemctl enable bootc-update.timer
 # flatpak
 systemctl enable flatpak-setup.service
 systemctl enable flatpak-update.service
