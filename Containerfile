@@ -3,10 +3,8 @@ COPY --chmod=755 script.sh /
 
 # Base Image
 FROM quay.io/fedora/fedora-bootc:latest
-FROM quay.io/centos/centos:latest
-FROM quay.io/centos/centos:stream10-minimal
-FROM quay.io/centos/centos:stream10
-FROM quay.io/almalinuxorg/almalinux-bootc:latest
+#FROM quay.io/centos/centos:latest
+#FROM quay.io/almalinuxorg/almalinux-bootc:latest
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
