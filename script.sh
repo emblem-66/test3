@@ -56,7 +56,7 @@ dnf install -y \
 
 #dnf remove -y \
 
-rpm -qa 'qemu-user-static*' | xargs dnf remove -y
+#rpm -qa 'qemu-user-static*' | xargs dnf remove -y
 
 #dnf clean all
 
