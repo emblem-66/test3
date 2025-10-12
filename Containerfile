@@ -2,8 +2,8 @@ FROM scratch AS ctx
 COPY --chmod=755 script.sh /
 
 # Base Image
-FROM quay.io/fedora/fedora-bootc:latest
-#FROM quay.io/centos/centos:latest
+#FROM quay.io/fedora/fedora-bootc:latest
+FROM quay.io/centos-bootc/centos-bootc:stream10
 #FROM quay.io/almalinuxorg/almalinux-bootc:latest
 
 ### MODIFICATIONS
