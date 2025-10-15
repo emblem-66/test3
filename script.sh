@@ -36,7 +36,7 @@ set -xeuo pipefail
 #    w3m \
 #    wget
 
-
+rpm -qa | sort
 
 # GNOME desktop
 dnf install -y \
