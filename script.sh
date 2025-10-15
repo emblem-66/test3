@@ -39,20 +39,19 @@ set -xeuo pipefail
 rpm -qa | sort
 
 # GNOME desktop
-dnf install -y \
-    gdm \
-    gnome-shell \
-    nautilus \
-    ptyxis \
-    gnome-disk-utility \
-    adw-gtk3-theme
+#dnf install -y \
+#    gdm \
+#    gnome-shell \
+#    nautilus \
+#    ptyxis \
+#    gnome-disk-utility \
+#    adw-gtk3-theme
 
 # graphical target
-systemctl set-default graphical.target
+#systemctl set-default graphical.target
 
 # desktop plumbing/apps
-dnf install -y \
-    flatpak
+#dnf install -y flatpak
 
 #dnf remove -y \
 
